@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Uygulama ici guncelleme: yeni APK'yi indirip kurabilmek icin -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <queries>
         <intent>
@@ -36,5 +38,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+        <!-- Guncelleme kurulumunun sonucunu alir (Updater.java) -->
+        <receiver android:name=".Updater$Receiver" android:exported="false" />
     </application>
 </manifest>
