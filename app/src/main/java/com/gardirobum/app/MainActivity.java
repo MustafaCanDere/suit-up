@@ -82,6 +82,7 @@ public class MainActivity extends Activity {
 
         if (savedInstanceState != null) web.restoreState(savedInstanceState);
         else web.loadUrl(START_URL);
+        Updater.checkOnStart(this);
     }
 
     private boolean openCamera() {
